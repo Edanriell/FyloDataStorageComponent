@@ -1,0 +1,22 @@
+.font-variable(@name, @file, @weight: 100 900, @style: normal) {
+	@font-face {
+		font-family: @name;
+		src: url("fonts/@{file}.ttf") format("truetype");
+		font-weight: @weight;
+		font-style: @style;
+		font-display: swap;
+	}
+}
+
+.font-regular(@name, @file, @weight: normal, @style: normal) {
+	@font-face {
+		font-family: @name;
+		src: url("fonts/@{file}.ttf") format("truetype");
+		font-weight: @weight;
+		font-style: @style;
+		font-display: swap;
+	}
+}
+
+.font-variable("Raleway", "Raleway-VariableFont_wght", 100 900, normal);
+.font-variable("Raleway", "Raleway-Italic-VariableFont_wght", 100 900, italic);
