@@ -1,7 +1,5 @@
 <script lang="ts">
-
+    import {DataStorage} from "@features/data-storage";
 </script>
 
-<section class="">
-    <h1>Home Page</h1>
-</section>
+<DataStorage/>
