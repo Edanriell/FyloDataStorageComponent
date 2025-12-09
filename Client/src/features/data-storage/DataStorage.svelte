@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
+    import {Logotype} from "@shared/ui/logotype";
 </script>
 
 <section>
     <h2 class="sr-only">Used storage</h2>
     <div>
+        <Logotype/>
         <ul>
             <li>
                 <button></button>
