@@ -19,7 +19,7 @@
 
 <article class={`relative flex flex-col gap-y-[1rem] ${className}`}>
     <h2 class="sr-only">Used storage</h2>
-    <div class="flex flex-col pl-[2.5rem] pb-[2.554rem] pt-[2.554rem] pr-[6.875rem] bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem_6.25rem_0.625rem_0.625rem] gap-y-[2rem]">
+    <div class="flex flex-col pl-[2.5rem] pb-[2.554rem] pt-[2.554rem] pr-[6.875rem] bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem_6.25rem_0.625rem_0.625rem] gap-y-[2rem] tablet:max-w-[21.875rem]">
         <Logotype/>
         <ul class="flex flex-row gap-x-[1rem]">
             <li class="relative">
@@ -53,7 +53,7 @@
         </ul>
     </div>
     <div class="bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem] px-[2rem] py-[2.5rem]">
-        <p class="font-[Raleway] font-normal text-[0.875rem] leading-[115%] text-center text-[var(--colors-blue-200)] mb-[1rem]">
+        <p class="font-[Raleway] font-normal text-[0.875rem] leading-[115%] text-center text-[var(--colors-blue-200)] mb-[1rem] tablet:text-left">
             You’ve used
             <strong class="font-bold!">{usedStorageAmount}
                 GB</strong> of

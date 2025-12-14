@@ -2,4 +2,4 @@
     import {DataStorage} from "@features/data-storage";
 </script>
 
-<DataStorage usedStorageAmount={815}/>
+<DataStorage class="tablet:min-w-[33.75rem]" usedStorageAmount={815}/>
