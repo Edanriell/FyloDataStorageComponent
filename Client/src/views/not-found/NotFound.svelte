@@ -5,7 +5,7 @@
     const message = "Page not found";
 </script>
 
-<div class="w-full min-h-screen flex flex-col items-center justify-center text-center px-4 bg-[#f6f5f6]">
+<div class="w-full min-h-screen flex flex-col items-center justify-center text-center px-4">
     <h1 class="text-[100px] font-extrabold text-gray-700">
         {status}
     </h1>

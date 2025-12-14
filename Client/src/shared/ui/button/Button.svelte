@@ -10,7 +10,7 @@
 </script>
 
 <button
-        class={`rounded-[10px] bg-[var(--colors-blue-950)] ${className}`}
+        class={`block rounded-[10px] bg-[var(--colors-blue-950)] cursor-pointer ${className}`}
         type="button"
 >
     {@render children?.()}

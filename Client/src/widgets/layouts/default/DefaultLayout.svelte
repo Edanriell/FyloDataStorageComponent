@@ -117,7 +117,7 @@
             </linearGradient>
         </defs>
     </svg>
-    <main class="relative">
+    <main class="relative min-h-[100vh] flex items-center justify-center">
         <slot/>
     </main>
 </div>
