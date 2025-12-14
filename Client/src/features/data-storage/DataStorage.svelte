@@ -17,9 +17,10 @@
     );
 </script>
 
-<article class={`relative flex flex-col gap-y-[1rem] ${className}`}>
+<article
+        class={`relative flex flex-col gap-y-[1rem] desktop:flex-row desktop:gap-x-[2rem] desktop:items-end ${className}`}>
     <h2 class="sr-only">Used storage</h2>
-    <div class="flex flex-col pl-[2.5rem] pb-[2.554rem] pt-[2.554rem] pr-[6.875rem] bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem_6.25rem_0.625rem_0.625rem] gap-y-[2rem] tablet:max-w-[21.875rem]">
+    <div class="flex flex-col pl-[2.5rem] pb-[2.554rem] pt-[2.554rem] pr-[6.875rem] bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem_6.25rem_0.625rem_0.625rem] gap-y-[2rem] tablet:max-w-[21.875rem] desktop:pr-[8.375rem]">
         <Logotype/>
         <ul class="flex flex-row gap-x-[1rem]">
             <li class="relative">
@@ -52,7 +53,7 @@
             </li>
         </ul>
     </div>
-    <div class="bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem] px-[2rem] py-[2.5rem]">
+    <div class="relative bg-[var(--colors-blue-850)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] rounded-[0.625rem] px-[2rem] py-[2.5rem] tablet:px-[2.406rem] desktop:w-full">
         <p class="font-[Raleway] font-normal text-[0.875rem] leading-[115%] text-center text-[var(--colors-blue-200)] mb-[1rem] tablet:text-left">
             You’ve used
             <strong class="font-bold!">{usedStorageAmount}
@@ -65,7 +66,7 @@
              aria-valuenow={totalStorageAmount - usedStorageAmount}
              class="relative"
              role="progressbar">
-            <div class="flex flex-col gap-y-[0.5rem] mb-[0.5rem]">
+            <div class="flex flex-col gap-y-[0.5rem]">
                 <div class="relative p-[0.188rem] rounded-[0.625rem] w-full h-[1.25rem] bg-[var(--colors-blue-900)]">
                     <div class="relative h-[0.875rem] rounded-[0.5rem] bg-[linear-gradient(90deg,_#ffa197_0%,_#ff4a95_100%)] p-[0.125rem]"
                          style={`width: ${percentage}%`}>
@@ -79,12 +80,36 @@
                 </div>
             </div>
         </div>
-        <div class="absolute bottom-[-2rem] left-[50%] translate-x-[-50%] inline-block rounded-[0.625rem] px-[1.531rem] py-[1rem] bg-[var(--colors-white)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)]">
+        <div class="absolute bottom-[-2.5rem] left-[50%] translate-x-[-50%] inline-block rounded-[0.625rem] px-[1.531rem] py-[1rem] bg-[var(--colors-white)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] desktop:bottom-[unset] desktop:top-[-2.438rem] desktop:left-[unset] desktop:right-[2.5rem] desktop:translate-x-[unset] desktop:rounded-[0.625rem_0.625rem_0_0.625rem]">
             <span class="flex flex-row items-center gap-x-[0.5rem] font-[Raleway] font-bold text-[0.75rem] leading-[115%] tracking-[0.08em] text-[var(--colors-blue-950)] uppercase text-nowrap">
                 <strong
                         class="font-bold text-[2.5rem]! leading-[100%]! text-[var(--colors-blue-950)]!">{totalStorageAmount - usedStorageAmount}</strong>
                 <span class="opacity-[0.5]">Gb left</span>
             </span>
+            <svg class="hidden desktop:block absolute bottom-[-198px] right-[-100.5px]"
+                 fill="none"
+                 height="223"
+                 preserveAspectRatio="none"
+                 viewBox="0 0 223 223"
+                 width="223" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_42139_106)">
+                    <path clip-rule="evenodd" d="M100 25L122.661 47.6609V25H100Z" fill="white" fill-rule="evenodd"/>
+                </g>
+                <defs>
+                    <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="222.661"
+                            id="filter0_d_42139_106" width="222.661"
+                            x="0" y="0">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix"
+                                       values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                        <feOffset dy="75"/>
+                        <feGaussianBlur stdDeviation="50"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24776 0"/>
+                        <feBlend in2="BackgroundImageFix" mode="normal" result="effect1_dropShadow_42139_106"/>
+                        <feBlend in="SourceGraphic" in2="effect1_dropShadow_42139_106" mode="normal" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
         </div>
     </div>
 </article>
