@@ -2,4 +2,4 @@
     import {DataStorage} from "@features/data-storage";
 </script>
 
-<DataStorage/>
+<DataStorage usedStorageAmount={815}/>
