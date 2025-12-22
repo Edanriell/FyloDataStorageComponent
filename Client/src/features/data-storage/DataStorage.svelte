@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Button, Logotype} from "@shared/ui";
+    import {Button, Logotype, Progressbar} from "@shared/ui";
 
     interface Props {
         usedStorageAmount: number;
@@ -8,13 +8,6 @@
     }
 
     let {usedStorageAmount, totalStorageAmount = 1000, class: className = ""}: Props = $props();
-
-    const percentage = $derived(
-        Math.min(
-            100,
-            Math.max(0, (usedStorageAmount / totalStorageAmount) * 100)
-        )
-    );
 </script>
 
 <article
@@ -60,33 +53,14 @@
                 GB</strong> of
             your
             storage</p>
-        <div aria-label="Space left in storage"
-             aria-valuemax={totalStorageAmount}
-             aria-valuemin="0"
-             aria-valuenow={totalStorageAmount - usedStorageAmount}
-             class="relative"
-             role="progressbar">
-            <div class="flex flex-col gap-y-[0.5rem]">
-                <div class="relative p-[0.188rem] rounded-[0.625rem] w-full h-[1.25rem] bg-[var(--colors-blue-900)]">
-                    <div class="relative h-[0.875rem] rounded-[0.5rem] bg-[linear-gradient(90deg,_#ffa197_0%,_#ff4a95_100%)] p-[0.125rem]"
-                         style={`width: ${percentage}%`}>
-                        <div class="rounded-full bg-[var(--colors-white)] w-[0.625rem] h-[0.625rem] ml-[auto] mr-[0]"></div>
-                    </div>
-                </div>
-                <div class="flex flex-row justify-between">
-                    <span class="font-[Raleway] font-extrabold text-[0.75rem] leading-[115%] text-[var(--colors-blue-200)] uppercase">0 GB</span>
-                    <span class="font-[Raleway] font-extrabold text-[0.75rem] leading-[115%] text-[var(--colors-blue-200)] uppercase">{totalStorageAmount}
-                        GB</span>
-                </div>
-            </div>
-        </div>
+        <Progressbar totalStorageAmount={totalStorageAmount} usedStorageAmount={usedStorageAmount}/>
         <div class="absolute bottom-[-2.5rem] left-[50%] translate-x-[-50%] inline-block rounded-[0.625rem] px-[1.531rem] py-[1rem] bg-[var(--colors-white)] shadow-[0_4.688rem_6.25rem_-1.875rem_rgba(0,0,0,0.25)] desktop:bottom-[unset] desktop:top-[-2.438rem] desktop:left-[unset] desktop:right-[2.5rem] desktop:translate-x-[unset] desktop:rounded-[0.625rem_0.625rem_0_0.625rem]">
             <span class="flex flex-row items-center gap-x-[0.5rem] font-[Raleway] font-bold text-[0.75rem] leading-[115%] tracking-[0.08em] text-[var(--colors-blue-950)] uppercase text-nowrap">
                 <strong
                         class="font-bold text-[2.5rem]! leading-[100%]! text-[var(--colors-blue-950)]!">{totalStorageAmount - usedStorageAmount}</strong>
                 <span class="opacity-[0.5]">Gb left</span>
             </span>
-            <svg class="hidden desktop:block absolute bottom-[-198px] right-[-100.5px]"
+            <svg class="hidden desktop:block absolute bottom-[-196px] right-[-101px]"
                  fill="none"
                  height="223"
                  preserveAspectRatio="none"
