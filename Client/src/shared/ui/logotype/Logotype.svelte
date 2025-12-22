@@ -2,7 +2,8 @@
     import {resolve} from '$app/paths';
 </script>
 
-<a aria-label="Return back to home page" href={resolve('/')}>
+<a aria-label="Return back to home page" class="focus:outline-none focus:ring-2 focus:ring-cyan-400/40 rounded-[10px]"
+   href={resolve('/')}>
     <svg fill="none" height="40" viewBox="0 0 135 40" width="135" xmlns="http://www.w3.org/2000/svg">
         <path clip-rule="evenodd"
               d="M0 12.0419V12.1405L22.8227 22.7282L45.7258 12.1045V12.0778L22.8227 1.45459L0 12.0419ZM8.22793 12.0915L22.8232 5.32086L37.4198 12.0915L22.8227 18.8615L8.22793 12.0915ZM22.8227 26.8405L0 16.4113V20.2687L22.8227 30.7218L45.7258 20.2332V16.3753L22.8227 26.8405ZM22.8227 34.6638L0 24.2337V28.0911L22.8227 38.5455L45.7258 28.0556V24.1981L22.8227 34.6638Z"
